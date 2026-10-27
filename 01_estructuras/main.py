@@ -30,4 +30,29 @@ def resumir_ventas(ventas):
 ventas = [("cafe", 2), ("te", 1), ("cafe", 3)]
 print(resumir_ventas(ventas))
 
+productos = {}
+for item in ventas:
+    producto=item [0]
+    cantidad=item [1]
+
+    productos[producto]=cantidad
+
+
+solo_productos = []
+unidades_totales = 0
+
+for producto in productos:
+    solo_productos.append(producto)
+    unidades_totales += productos[producto]
+
+print(solo_productos)
+print(unidades_totales)
+
+resultado = {
+    "productos": set(solo_productos),
+    "unidades": unidades_totales,
+    "por_producto": productos
+}
+print(resultado)
+
 # TODO: añade otro ejemplo con print y su resultado esperado en un comentario.
