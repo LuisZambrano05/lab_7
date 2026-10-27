@@ -18,8 +18,12 @@ Al terminar: git commit -m "Resuelve ejercicio 03".
 """
 
 def calcular_importes(precios):
-    # TODO: implementa lo solicitado y devuelve el resultado.
-    pass
+
+    recargo = lambda p: round(p *1.10, 2)
+
+    return [recargo(p) for p in precios]
+
+
 
 
 # Ejemplo de uso: inicialmente imprime None porque falta la implementación.
